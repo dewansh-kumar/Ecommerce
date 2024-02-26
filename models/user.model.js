@@ -10,6 +10,11 @@ const userSchema = new Schema(
       trim: true,
       index: true,
     },
+    email: {
+      type: String,
+      trim: true,
+      require: true
+    },
     password: {
       type: String,
       require: [true, "password is require"],
@@ -27,6 +32,10 @@ const userSchema = new Schema(
     telephone: {
       type: String,
       require: true,
+    },
+    isAdmin:{
+      type: Boolean,
+      default: false
     },
     refreshToken: {
       type: String,
