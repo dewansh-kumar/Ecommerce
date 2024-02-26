@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-export const generateAccessAndWebToken = async (userId) => {
+export const generateAccessAndRefreshToken = async (userId) => {
   try {
     const accessToken = await jwt.sign(
       {
